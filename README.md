@@ -1,94 +1,139 @@
-# AI AgriYield Predictor — Manohar Vinay Mududundi
-
-**Project:** AI_AgriYield_Predictor-Manohar_Vinay_Mududundi
+# 🌾 AgriYield Predictor: Forecasting Crop Yield Using Environmental and Soil Data
 
 ---
 
-## 🚜 Overview
+## 📘 Project Overview
 
-AI AgriYield Predictor is a reproducible repository that demonstrates how machine learning models can be used to predict crop yield from agricultural datasets. This fork follows the original structure of the Springboard mentor project and contains code, notebooks, and instructions to train, evaluate, and run a model for agricultural yield prediction.
-
-**Key goals:**
-
-* Preprocess and explore agricultural data
-* Train one or more ML models to predict crop yield
-* Evaluate model performance and provide visualizations
-* Make the project easy to run and reproduce locally or on Colab
+The **AgriYield Predictor** is an AI-powered machine learning system that forecasts crop yield using environmental and soil-based data such as rainfall, temperature, humidity, soil type, and nutrient content. This project aims to support **farmers, agronomists, and agricultural planners** in optimizing crop production decisions through data-driven insights.
 
 ---
 
-## 🛠️ Requirements
+## 🎯 Objective
 
-Recommended environment (Python 3.8+):
-
-* numpy
-* pandas
-* scikit-learn
-* matplotlib
-* seaborn
-* jupyterlab / notebook
-* joblib or pickle (for saving models)
-
-You can install the standard dependencies with:
-
-```bash
-pip install -r requirements.txt
-# or
-pip install numpy pandas scikit-learn matplotlib seaborn jupyterlab joblib
-```
-
-> Tip: If you plan to run on Google Colab, most packages are preinstalled. Upload the notebooks and run cells directly.
+Develop a **predictive model** capable of accurately estimating crop yield based on historical data, environmental conditions, and soil characteristics. The model enhances agricultural planning and sustainability by leveraging modern AI and data science techniques.
 
 ---
 
-## 🚀 How to run
+## 🧩 Key Outcomes
 
-Below are general steps that will make your work reproducible for reviewers and for deployment demos (Colab / local):
-
-1. **Fork & clone**
-
-```bash
-git clone https://github.com/<your-username>/AI_AgriYield_Predictor-<YourName>.git
-cd AI_AgriYield_Predictor-<YourName>
-```
-
-2. **Add your data**
-
-* Place raw datasets in `data/` or add links in a `DATASET.md` with download instructions.
-
-3. **Run notebooks**
-
-* Start Jupyter and run the EDA and preprocessing notebooks in the order provided.
-
-```bash
-jupyter lab
-# open notebooks/eda.ipynb -> preprocessing.ipynb -> train.ipynb
-```
-
-4. **Train / evaluate**
-
-* Use `src/train.py` (if present) to train models and store artifacts in `models/`.
-
-```bash
-python src/train.py --config config/train_config.yaml
-```
-
-5. **Inference / predict**
-
-* Use `src/predict.py` or a notebook cell to load a saved model and make predictions on new samples.
-
-```bash
-python src/predict.py --model models/best_model.pkl --input data/sample.csv
-```
+* Learn data preprocessing and feature engineering on agricultural datasets.
+* Train and compare multiple regression models for yield prediction.
+* Evaluate performance using key regression metrics (RMSE, MAE, R²).
+* Interpret models using explainability tools (e.g., SHAP values).
+* Deliver a **functional prototype** with user-friendly input options and yield prediction output.
 
 ---
 
-## 🧾 License
+## 🌱 Datasets Used
 
-This repository uses the **MIT License** (see `LICENSE` in the repo).
+| Source                                        | Description                           | Link                                                                                         |
+| --------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **FAO Crop Production Dataset**               | Global crop yield data across regions | [FAO](https://www.fao.org/faostat/en/#data/QCL)                                              |
+| **Kaggle Crop Recommendation Dataset**        | Environmental & soil data             | [Kaggle Dataset 1](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset) |
+| **Indian Govt. Open Agriculture Data Portal** | Region-wise agricultural data         | [Data.gov.in](https://www.data.gov.in/sector/agriculture)                                    |
+| **US Weather Events Dataset**                 | Weather data for feature augmentation | [Kaggle Dataset 2](https://www.kaggle.com/datasets/sobhanmoosavi/us-weather-events)          |
+| **NOAA Historical Weather Data**              | Global weather conditions             | [NOAA](https://www.ncei.noaa.gov/)                                                           |
 
 ---
 
-## ✉️ Author / Contact
+## 🧠 System Architecture
 
-**Manohar Vinay Mududundi** — contributor.
+The architecture consists of the following layers:
+
+1. **Data Collection Layer:** Integrates weather, soil, and yield datasets from open sources.
+2. **Preprocessing Layer:** Cleans and merges datasets, handles missing values, normalizes features.
+3. **Feature Engineering:** Encodes categorical variables, derives new features (e.g., growing season index, heat days).
+4. **Model Training Layer:** Implements regression algorithms such as Random Forest, XGBoost, and Linear Regression.
+5. **Prediction & Visualization:** UI for real-time yield prediction and interpretability visualizations.
+
+---
+
+## 🧮 Evaluation Metrics
+
+| Metric                                | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| **R² (Coefficient of Determination)** | Measures how well future samples are likely to be predicted.     |
+| **RMSE (Root Mean Squared Error)**    | Penalizes large prediction errors.                               |
+| **MAE (Mean Absolute Error)**         | Average absolute difference between actual and predicted values. |
+
+---
+
+## 🧰 Tools & Technologies
+
+**Programming Language:** Python 3.8+
+
+**Libraries & Frameworks:**
+
+* Data Handling: `pandas`, `numpy`
+* Visualization: `matplotlib`, `seaborn`, `plotly`
+* Machine Learning: `scikit-learn`, `xgboost`, `lightgbm`
+* Model Explainability: `SHAP`, `eli5`
+* Web Framework: `Flask` or `Django`
+* Frontend: `HTML`, `CSS`, `JavaScript`, `Bootstrap`
+
+**Development Tools:**
+
+* IDEs: Jupyter Notebook, VS Code
+* Version Control: Git & GitHub
+* Deployment: Heroku, AWS, or Google Cloud Platform
+
+---
+
+## 💻 How to Run
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/vinay124-tech/AI_AgriYield_Predictor-Manohar_Vinay_Mududundi.git
+   cd AI_AgriYield_Predictor-Manohar_Vinay_Mududundi
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run Jupyter notebooks:**
+
+   ```bash
+   jupyter lab
+   ```
+
+   Execute notebooks in `notebooks/` sequentially: EDA → Preprocessing → Model Training.
+
+4. **Run Web UI:**
+
+   ```bash
+   python app.py
+   ```
+
+5. **Access the web app:**
+   Visit `http://localhost:5000` to input data and view predicted yields.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Manohar Vinay Mududundi**
+Integrated Dual Degree (B.Tech + M.Tech), Electronics and Communication Engineering
+Focus: AI, ML, Signal Processing, and Data Science
+GitHub: [vinay124-tech](https://github.com/vinay124-tech)
+
+---
+
+### 🏁 Future Enhancements
+
+* Incorporate **deep learning models (LSTM, GRU)** for spatio-temporal yield forecasting.
+* Add **satellite imagery-based features** (NDVI, EVI).
+* Deploy as a **progressive web app (PWA)** with interactive charts.
+
+---
+
+> *“Empowering agriculture with data-driven intelligence — bridging AI and sustainability.”*
