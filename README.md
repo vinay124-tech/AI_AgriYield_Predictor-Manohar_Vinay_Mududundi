@@ -48,6 +48,24 @@ The architecture consists of the following layers:
 
 ---
 
+## 🏆 Project Milestones
+
+**Milestone 1: Data Preparation & EDA**
+---
+Cleaned and merged environmental, soil, and yield datasets with standardized crop and soil mappings. Addressed outliers using IQR techniques and handled missing values using appropriate imputation strategies. Performed an in‑depth exploratory data analysis using heatmaps, box plots, violin plots, correlation studies, and seasonal comparisons to reveal key yield patterns across crops, seasons, and soil types. Produced a fully cleaned and structured dataset suitable for reliable model training.
+
+**Milestone 2: Model Development & Evaluation**
+---
+Experimented with multiple regression models including Linear Regression, Random Forest, XGBoost, and Support Vector Regression. Based on comparative evaluation, Linear Regression demonstrated the most consistent and stable performance for this dataset. The model was trained, tested, and validated with appropriate evaluation metrics (R², RMSE, MAE). Snapshots of model evaluation and validation results are included in the training notebook.
+
+**Milestone 3: UI Development & Deployment**
+---
+Designed and developed a clean, intuitive web interface using Streamlit, enabling real‑time yield predictions through user‑provided environmental inputs. The application integrates the trained model, provides instant predictions, and ensures a smooth, interactive user experience. Successfully deployed the Streamlit application for accessible, real‑world usage.
+
+---
+## **Deployment link :  https://opal-mirky-noncontroversially.ngrok-free.dev/**
+---
+
 ## 🧮 Evaluation Metrics
 
 | Metric                                | Description                                                      |
