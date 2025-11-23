@@ -63,7 +63,7 @@ Experimented with multiple regression models including Linear Regression, Random
 Designed and developed a clean, intuitive web interface using Streamlit, enabling real‑time yield predictions through user‑provided environmental inputs. The application integrates the trained model, provides instant predictions, and ensures a smooth, interactive user experience. Successfully deployed the Streamlit application for accessible, real‑world usage.
 
 ---
-## **Deployment link :  https://opal-mirky-noncontroversially.ngrok-free.dev/**
+## **Deployment link :  https://agriyieldpredictor.streamlit.app/**
 ---
 
 ## 🧮 Evaluation Metrics
